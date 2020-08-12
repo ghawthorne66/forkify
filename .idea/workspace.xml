@@ -34,6 +34,8 @@
       <change afterPath="$PROJECT_DIR$/../budget-js/back.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../complete-javascript-course/4-DOM-pig-game/starter/dice-2.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../complete-javascript-course/6-budgety/starter/backone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/test.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../php-learning/.idea/.gitignore" afterDir="false" />
@@ -123,7 +125,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597171929944</updated>
-      <workItem from="1597171931131" duration="4489000" />
+      <workItem from="1597171931131" duration="7657000" />
     </task>
     <servers />
   </component>
@@ -140,5 +142,31 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="969" height="379" key="GridCell.Tab.0.bottom" timestamp="1597190539740">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="1419" height="205" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597190147236" />
+    <state width="969" height="379" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1597190539740" />
+    <state width="969" height="379" key="GridCell.Tab.0.center" timestamp="1597190539739">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="1419" height="205" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597190147235" />
+    <state width="969" height="379" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1597190539739" />
+    <state width="969" height="379" key="GridCell.Tab.0.left" timestamp="1597190539739">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="1419" height="205" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597190147235" />
+    <state width="969" height="379" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1597190539739" />
+    <state width="969" height="379" key="GridCell.Tab.0.right" timestamp="1597190539740">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="1419" height="205" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597190147236" />
+    <state width="969" height="379" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1597190539740" />
+    <state x="450" y="369" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1597189617693">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="450" y="369" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1440.900@0.0.1440.900" timestamp="1597189617693" />
   </component>
 </project>
