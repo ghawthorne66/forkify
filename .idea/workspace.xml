@@ -36,7 +36,11 @@
       <change afterPath="$PROJECT_DIR$/../complete-javascript-course/6-budgety/starter/backone.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/models/Recipe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/models/Search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/views/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/views/searchView.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../php-learning/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../php-learning/.idea/misc.xml" afterDir="false" />
@@ -76,6 +80,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -100,9 +105,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/js" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$/dist/img" />
     </key>
@@ -125,7 +133,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597171929944</updated>
-      <workItem from="1597171931131" duration="7657000" />
+      <workItem from="1597171931131" duration="22995000" />
     </task>
     <servers />
   </component>
@@ -144,29 +152,77 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="969" height="379" key="GridCell.Tab.0.bottom" timestamp="1597190539740">
+    <state x="222" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597207864353">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="222" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1597207864353" />
+    <state width="1041" height="379" key="GridCell.Tab.0.bottom" timestamp="1597359621306">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="1419" height="205" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597190147236" />
-    <state width="969" height="379" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1597190539740" />
-    <state width="969" height="379" key="GridCell.Tab.0.center" timestamp="1597190539739">
+    <state width="1041" height="379" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1597359621306" />
+    <state width="1041" height="379" key="GridCell.Tab.0.center" timestamp="1597359621305">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="1419" height="205" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597190147235" />
-    <state width="969" height="379" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1597190539739" />
-    <state width="969" height="379" key="GridCell.Tab.0.left" timestamp="1597190539739">
+    <state width="1041" height="379" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1597359621305" />
+    <state width="1041" height="379" key="GridCell.Tab.0.left" timestamp="1597359621304">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="1419" height="205" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597190147235" />
-    <state width="969" height="379" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1597190539739" />
-    <state width="969" height="379" key="GridCell.Tab.0.right" timestamp="1597190539740">
+    <state width="1041" height="379" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1597359621304" />
+    <state width="1041" height="379" key="GridCell.Tab.0.right" timestamp="1597359621305">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="1419" height="205" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597190147236" />
-    <state width="969" height="379" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1597190539740" />
+    <state width="1041" height="379" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1597359621305" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1597249166275">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1597249166275" />
+    <state x="385" y="202" width="670" height="619" key="search.everywhere.popup" timestamp="1597361641989">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1597360317146" />
+    <state x="385" y="202" width="670" height="619" key="search.everywhere.popup/0.23.1440.823@0.23.1440.823" timestamp="1597361641989" />
     <state x="450" y="369" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1597189617693">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="450" y="369" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1440.900@0.0.1440.900" timestamp="1597189617693" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/babel-polyfill/browser.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/babel-polyfill/lib/index.js</url>
+          <line>22</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/webpack.config.js</url>
+          <line>7</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>31</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>2</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
