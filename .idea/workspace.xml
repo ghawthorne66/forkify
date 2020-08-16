@@ -35,7 +35,6 @@
       <change afterPath="$PROJECT_DIR$/../complete-javascript-course/4-DOM-pig-game/starter/dice-2.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../complete-javascript-course/6-budgety/starter/backone.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/config.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/models/Recipe.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/models/Search.js" afterDir="false" />
@@ -133,7 +132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597171929944</updated>
-      <workItem from="1597171931131" duration="26826000" />
+      <workItem from="1597171931131" duration="30099000" />
     </task>
     <servers />
   </component>

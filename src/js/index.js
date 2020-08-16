@@ -2,7 +2,7 @@ import Search from "./models/Search";
 // import Recipe from './models/Recipe';
 import 'idempotent-babel-polyfill';
 import * as searchView from './views/searchView';
-import {elements} from "./views/base";
+import {elements, renderLoader, clearLoader} from "./views/base";
 
 
 /*
@@ -24,6 +24,7 @@ const controlSearch = async () => {
 
       searchView.clearInput();
       searchView.clearResults();
+      renderLoader(elements.searchRes);
 
 
       //search for recipes
@@ -31,7 +32,9 @@ const controlSearch = async () => {
 
       //render the results on UI
       console.log(state.search.result);
+      clearLoader();
       searchView.renderResults(state.search.result);
+
   }
 }
 
