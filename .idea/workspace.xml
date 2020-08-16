@@ -37,9 +37,12 @@
       <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/models/List.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/models/Recipe.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/models/Search.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/views/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/views/listView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/views/recipeView.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/views/searchView.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../php-learning/.idea/.gitignore" afterDir="false" />
@@ -133,7 +136,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597171929944</updated>
-      <workItem from="1597171931131" duration="38520000" />
+      <workItem from="1597171931131" duration="41900000" />
     </task>
     <servers />
   </component>
