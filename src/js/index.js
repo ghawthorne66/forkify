@@ -1,8 +1,8 @@
-import Search from "./models/Search";
-// import Recipe from './models/Recipe';
 import 'idempotent-babel-polyfill';
+import Search from "./models/Search";
+import Recipe from './models/Recipe';
 import * as searchView from './views/searchView';
-import {elements, renderLoader, clearLoader} from "./views/base";
+import {elements, renderLoader, clearLoader} from './views/base';
 
 
 /*
@@ -12,35 +12,50 @@ import {elements, renderLoader, clearLoader} from "./views/base";
  */
 
 const state = {};
+/**
+ * SEARCH CONTROLLER
+ */
 const controlSearch = async () => {
-//get query from the view
-  const query = searchView.getInput();
-  console.log(query)//TODO
+    // 1) Get query from view
+    const query = searchView.getInput();
 
-  if (query) {
-     //new search object and add to state
-     state.search = new Search(query);
-     // prepare UI for results
+    if (query) {
+        // 2) New search object and add to state
+        state.search = new Search(query);
 
-      searchView.clearInput();
-      searchView.clearResults();
-      renderLoader(elements.searchRes);
+        // 3) Prepare UI for results
+        searchView.clearInput();
+        searchView.clearResults();
+        renderLoader(elements.searchRes);
 
+      try {
+          // 4) Search for recipes
+          await state.search.getResults();
 
-      //search for recipes
-     await state.search.getResults();
-
-      //render the results on UI
-      console.log(state.search.result);
-      clearLoader();
-      searchView.renderResults(state.search.result);
-
+          // 5) Render results on UI
+          clearLoader();
+          searchView.renderResults(state.search.result);
+      } catch (err) {
+          alert('Something wrong with the search...');
+          clearLoader();
+      }
   }
 }
-
-elements.searchForm.addEventListener('submit', event => {
-event.preventDefault();
-controlSearch();
+elements.searchForm.addEventListener('submit', e => {
+    e.preventDefault();
+    controlSearch();
 });
 
-search.getResults()
+elements.searchResPages.addEventListener('click', e => {
+    const btn = e.target.closest('.btn-inline');
+    if (btn) {
+
+        const goToPage = parseInt(btn.dataset.goto, 10);
+        searchView.clearResults();
+        searchView.renderResults(state.search.result, goToPage);
+        console.log(state.search.result,goToPage)
+    }
+});
+
+
+// search.getResults()

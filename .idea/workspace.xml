@@ -35,6 +35,7 @@
       <change afterPath="$PROJECT_DIR$/../complete-javascript-course/4-DOM-pig-game/starter/dice-2.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../complete-javascript-course/6-budgety/starter/backone.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/config.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/models/Recipe.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/models/Search.js" afterDir="false" />
@@ -132,7 +133,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597171929944</updated>
-      <workItem from="1597171931131" duration="30099000" />
+      <workItem from="1597171931131" duration="37145000" />
     </task>
     <servers />
   </component>
@@ -151,6 +152,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597545875085">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="440" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1597545875085" />
     <state x="222" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597207864353">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
@@ -179,11 +184,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1597249166275" />
-    <state x="385" y="202" width="670" height="619" key="search.everywhere.popup" timestamp="1597361641989">
+    <state x="197" y="255" width="670" height="619" key="search.everywhere.popup" timestamp="1597590969324">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1597360317146" />
-    <state x="385" y="202" width="670" height="619" key="search.everywhere.popup/0.23.1440.823@0.23.1440.823" timestamp="1597361641989" />
+    <state x="197" y="255" width="670" height="619" key="search.everywhere.popup/0.23.1440.823@0.23.1440.823" timestamp="1597590969324" />
     <state x="450" y="369" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1597189617693">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -208,12 +213,6 @@
           <line>7</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/index.js</url>
-          <line>1</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
