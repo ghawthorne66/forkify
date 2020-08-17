@@ -23,6 +23,7 @@
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "fractional": "^1.0.0",
-    "idempotent-babel-polyfill": "^7.4.4"
+    "idempotent-babel-polyfill": "^7.4.4",
+    "uniqid": "^5.2.0"
   }
 }

@@ -37,10 +37,12 @@
       <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/models/Likes.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/models/List.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/models/Recipe.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/models/Search.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/views/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/views/likesView.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/views/listView.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/views/recipeView.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/js/views/searchView.js" afterDir="false" />
@@ -136,7 +138,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597171929944</updated>
-      <workItem from="1597171931131" duration="44161000" />
+      <workItem from="1597171931131" duration="45081000" />
     </task>
     <servers />
   </component>
@@ -216,6 +218,12 @@
           <line>7</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>113</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
