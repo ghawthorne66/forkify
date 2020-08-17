@@ -2,7 +2,7 @@ import 'idempotent-babel-polyfill';
 import Search from "./models/Search";
 import Recipe from './models/Recipe';
 import List from './models/List';
-// import Likes from './models/Likes';
+import Likes from './models/Likes';
 import * as searchView from './views/searchView';
 import * as recipeView from './views/recipeView';
 import * as listView from './views/listView';
@@ -34,24 +34,23 @@ const controlSearch = async () => {
         searchView.clearResults();
         renderLoader(elements.searchRes);
 
-      try {
-          // 4) Search for recipes
-          await state.search.getResults();
+        try {
+            // 4) Search for recipes
+            await state.search.getResults();
 
-          // 5) Render results on UI
-          clearLoader();
-          searchView.renderResults(state.search.result);
-      } catch (err) {
-          alert('Something wrong with the search...');
-          clearLoader();
-      }
-  }
+            // 5) Render results on UI
+            clearLoader();
+            searchView.renderResults(state.search.result);
+        } catch (err) {
+            alert('Something wrong with the search...');
+            clearLoader();
+        }
+    }
 }
 elements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
     controlSearch();
 });
-
 
 
 elements.searchResPages.addEventListener('click', e => {
@@ -61,7 +60,7 @@ elements.searchResPages.addEventListener('click', e => {
         const goToPage = parseInt(btn.dataset.goto, 10);
         searchView.clearResults();
         searchView.renderResults(state.search.result, goToPage);
-        console.log(state.search.result,goToPage)
+        console.log(state.search.result, goToPage)
     }
 });
 
@@ -104,7 +103,7 @@ const controlRecipe = async () => {
             console.log(err);
             alert('Error processing recipe!');
         }
-        }
+    }
 };
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, controlRecipe));
 /*
@@ -139,6 +138,38 @@ elements.shopping.addEventListener('click', e => {
         state.list.updateCount(id, val);
     }
 });
+
+/*
+LIKE CONTROLLER
+ */
+const controlLike = () => {
+    if (!state.likes) state.likes = new Likes();
+    const currentID = state.recipe.id;
+
+//User has not yet liked current recipe
+    if (!state.likes.isLiked()) {
+        //Add like to the state
+const newLike = state.likes.addLike(
+    currentID,
+    state.recipe.title,
+    state.recipe.author,
+    state.recipe.img);
+        //Toggle the like button
+
+        //Add like to the UI list
+        console.log(state.likes);
+        //User has liked current recipe
+    } else {
+        //Remove like from the state
+state.likes.deleteLike(currentID)
+        //Toggle the like button
+
+        //Remove like from the UI list
+        console.log(state.likes);
+
+    }
+};
+
 // Handling recipe button clicks
 elements.recipe.addEventListener('click', e => {
     if (e.target.matches('.btn-decrease, .btn-decrease *')) {
