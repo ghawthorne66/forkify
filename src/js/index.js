@@ -1,23 +1,21 @@
-import 'idempotent-babel-polyfill';
-import Search from "./models/Search";
+import Search from './models/Search';
 import Recipe from './models/Recipe';
 import List from './models/List';
 import Likes from './models/Likes';
 import * as searchView from './views/searchView';
 import * as recipeView from './views/recipeView';
 import * as listView from './views/listView';
-// import * as likesView from './views/likesView';
-import {elements, renderLoader, clearLoader} from './views/base';
+import * as likesView from './views/likesView';
+import { elements, renderLoader, clearLoader } from './views/base';
 
-
-/*
-*- Search object
-*- Current recipe object
-*- Shopping list object
+/** Global state of the app
+ * - Search object
+ * - Current recipe object
+ * - Shopping list object
+ * - Liked recipes
  */
-
 const state = {};
-window.state = state;
+
 /**
  * SEARCH CONTROLLER
  */
@@ -56,23 +54,19 @@ elements.searchForm.addEventListener('submit', e => {
 elements.searchResPages.addEventListener('click', e => {
     const btn = e.target.closest('.btn-inline');
     if (btn) {
-
         const goToPage = parseInt(btn.dataset.goto, 10);
         searchView.clearResults();
         searchView.renderResults(state.search.result, goToPage);
-        console.log(state.search.result, goToPage)
     }
 });
 
-
-// search.getResults()
 
 /**
  * RECIPE CONTROLLER
  */
 const controlRecipe = async () => {
+    // Get ID from url
     const id = window.location.hash.replace('#', '');
-    console.log(id);
 
     if (id) {
         // Prepare UI for changes
@@ -93,27 +87,31 @@ const controlRecipe = async () => {
             // Calculate servings and time
             state.recipe.calcTime();
             state.recipe.calcServings();
+
             // Render recipe
             clearLoader();
             recipeView.renderRecipe(
                 state.recipe,
-                // state.likes.isLiked(id)
+                state.likes.isLiked(id)
             );
+
         } catch (err) {
             console.log(err);
             alert('Error processing recipe!');
         }
     }
 };
+
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, controlRecipe));
-/*
-LIST CONTROLLER
+
+/**
+ * LIST CONTROLLER
  */
 const controlList = () => {
-    //Create a new list if there is none yet
+    // Create a new list IF there in none yet
     if (!state.list) state.list = new List();
 
-    //Add each ingredient to the list and UI
+    // Add each ingredient to the list and UI
     state.recipe.ingredients.forEach(el => {
         const item = state.list.addItem(el.count, el.unit, el.ingredient);
         listView.renderItem(item);
@@ -139,36 +137,57 @@ elements.shopping.addEventListener('click', e => {
     }
 });
 
-/*
-LIKE CONTROLLER
+
+/**
+ * LIKE CONTROLLER
  */
 const controlLike = () => {
     if (!state.likes) state.likes = new Likes();
     const currentID = state.recipe.id;
 
-//User has not yet liked current recipe
-    if (!state.likes.isLiked()) {
-        //Add like to the state
-const newLike = state.likes.addLike(
-    currentID,
-    state.recipe.title,
-    state.recipe.author,
-    state.recipe.img);
-        //Toggle the like button
+    // User has NOT yet liked current recipe
+    if (!state.likes.isLiked(currentID)) {
+        // Add like to the state
+        const newLike = state.likes.addLike(
+            currentID,
+            state.recipe.title,
+            state.recipe.author,
+            state.recipe.img
+        );
+        // Toggle the like button
+        likesView.toggleLikeBtn(true);
 
-        //Add like to the UI list
-        console.log(state.likes);
-        //User has liked current recipe
+        // Add like to UI list
+        likesView.renderLike(newLike);
+
+        // User HAS liked current recipe
     } else {
-        //Remove like from the state
-state.likes.deleteLike(currentID)
-        //Toggle the like button
+        // Remove like from the state
+        state.likes.deleteLike(currentID);
 
-        //Remove like from the UI list
-        console.log(state.likes);
+        // Toggle the like button
+        likesView.toggleLikeBtn(false);
 
+        // Remove like from UI list
+        likesView.deleteLike(currentID);
     }
+    likesView.toggleLikeMenu(state.likes.getNumLikes());
 };
+
+// Restore liked recipes on page load
+window.addEventListener('load', () => {
+    state.likes = new Likes();
+
+    // Restore likes
+    state.likes.readStorage();
+
+    // Toggle like menu button
+    likesView.toggleLikeMenu(state.likes.getNumLikes());
+
+    // Render the existing likes
+    state.likes.likes.forEach(like => likesView.renderLike(like));
+});
+
 
 // Handling recipe button clicks
 elements.recipe.addEventListener('click', e => {

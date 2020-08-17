@@ -22,7 +22,7 @@ accumulator: 0 / accumulator + current.length = 5/ new title has the word ['Past
 accumulator: 5 / accumulator + current.length = 9/ new title has the word ['Pasta' 'with']
 accumulator: 9 / accumulator + current.length = 15/ new title has the word ['Pasta' 'with' 'tomato']
  */
-const limitRecipeTitle = (title, limit = 17) => {
+export const limitRecipeTitle = (title, limit = 17) => {
     const newTitle = [];
     if (title.length > limit) {
     title.split(' ').reduce((accumulator, current) => {
